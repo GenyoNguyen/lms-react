@@ -1,0 +1,68 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+} */
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../Assets/wallpaper.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas,
+        'Courier New',
+        monospace;
+}
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 450px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #fff;
+    display: flex;
+    transition: height .2s ease;
+    overflow: hidden;
+}
+
+.wrapper.active {
+    height: 500px;
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    translate: -400px;
+}
+
+.wrapper.active .form-box.register {
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+.wrapper .form-box.login {
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+.wrapper .form-box.register {
+    transition: none;
+    translate: 400px;
+}
+
